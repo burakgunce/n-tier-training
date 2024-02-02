@@ -8,6 +8,7 @@ namespace MusicMarket.Api.Validators
         public SaveMusicResourceValidator()
         {
             RuleFor(m => m.Name).NotEmpty().MaximumLength(50);
+            RuleFor(m => m.ArtistId).NotEmpty().WithMessage("ArtistId must not be 0");
         }
     }
 }
