@@ -31,6 +31,8 @@ namespace MusicMarket.Api
             builder.Services.AddTransient<IMusicService, MusicService>();
             builder.Services.AddTransient<IArtistService, ArtistService>();
 
+            builder.Services.AddAutoMapper(typeof(Program));
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

@@ -22,7 +22,7 @@ namespace MusicMarket.Data.Repositories
 
         public async Task<IEnumerable<Music>> GetAllWithArtistByArtistIdAsync(int artistId)
         {
-            return await MusicMarketDbContext.Musics.Include(m => m.ArtistId).Where(m => m.ArtistId == artistId).ToListAsync();
+            return await MusicMarketDbContext.Musics.Include(m => m.Artist).Where(m => m.ArtistId == artistId).ToListAsync();
         }
 
         public async Task<Music> GetWithArtistByIdAsync(int id)
